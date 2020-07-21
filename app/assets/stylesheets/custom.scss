@@ -1,0 +1,234 @@
+h1 {
+  font-weight: 100;
+}
+
+.text-red {
+  color: red;
+}
+
+.btn-red {
+  color: white;
+  border: 1px solid red;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.5);
+  
+  &:hover {
+    color: white;
+  }
+}
+
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: silver;
+}
+
+.top-hero-container {
+  padding-top: 100px;
+  h1 {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 170px;
+  }
+}
+
+.form-control {
+  height: 45px;
+}
+.users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: silver;
+  
+  .users-new-container {
+    padding-top: 120px;
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+.navbar-transparent {
+  margin-bottom: 0px;
+  background-color: gray;
+  height: 80px;
+  a {
+    color: #fff !important;
+  }
+  
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 15px;
+  }
+  
+  img {
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 15px;
+  }
+}
+
+.btn-black {
+  color: white;
+  border: 1px solid #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.3);
+  
+  &:hover {
+    color: #565656;
+  }
+}
+
+.topic-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 120px;
+  background-color: silver;
+}
+
+.topic-index-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 70px;
+  background-color: silver;
+  .topic-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    width: 650px;
+    .topic-author {
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e6ecf0;
+      padding-bottom: 10px;
+    }
+    
+    .topic-text {
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    
+    img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: 32px;
+      width: 90%;
+    }
+    
+    .topic-index-icon {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+      color: red;
+    }
+    
+    .topic-index-icon2 {
+      width: 25px;
+      height: 25px;
+      margin-left: 0px;
+    }
+  }
+}
+
+.comment {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.userindex {
+  font-weight: 100px;
+  text-align: center;
+  padding-top: 60px;
+  padding-left: 20px;
+}
+
+tr {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  width: 300px;
+  height: 30px;
+}
+
+table {
+  background-color: white;
+}
+
+
+
+.fc-toolbar {
+  padding-top: 20px;
+}
+
+
+.field {
+  position: center;
+  margin-top: 30px;
+}
+
+.event {
+  background-color: silver;
+  padding-top: 100px;
+  width: 250px;
+}
+
+th[colspan] {
+  background-color: silver;
+  padding-bottom: 0px;
+  padding-top: 100px;
+  width: 180px;
+}
+
+.event2 {
+  background-color: silver;
+  width: 250px;
+}
+
+.event21 {
+  background-color: silver;
+  width: 50px;
+}
+
+.eventedit {
+  padding-top: 80px;
+}
+
+.eventlist {
+  padding-top: 200px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: silver;
+}
+
+body {
+  background-color: silver;
+}
+

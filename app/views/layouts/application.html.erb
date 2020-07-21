@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tweet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+    <% end %>
+    
+    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+      <div class="container">
+        <% if logged_in? %>
+          <%= link_to calendars_path do %>
+            <span><%= image_tag "icon/logo2.png", class: "navbar-brand" %></span>
+          <% end %>
+        <% end %>
+        <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
+            <li>
+              <%= link_to image_tag("icon/useredit"), edit_user_path(id: current_user.id) %>
+            </li>
+            <li>
+              <%= link_to new_user_path do %>
+                <%= image_tag "icon/newuser" %>
+                <p>新規登録</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to admin_users_path do %>
+                <%= image_tag "icon/userview" %>
+                <p>登録ユーザー</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to topics_path do %>
+                <%= image_tag "icon/topicview" %>
+                <p>投稿一覧</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to favorites_index_path do %>
+                <%= image_tag "icon/star.png" %>
+                <p>お気に入り</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_topic_path do %>
+                <%= image_tag "icon/topic.png" %>
+                <p>投 　稿</p>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to logout_path, method: :delete do %>
+                <%= image_tag "icon/logout.png" %>
+                <p>ログアウト</p>
+              <% end %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to login_path do %>
+                <%= image_tag "icon/login.png" %>
+                <p>ログイン</p>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+    
+    <script>
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
+    </script>
+  </body>
+</html>

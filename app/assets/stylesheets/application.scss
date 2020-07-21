@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require fullcalendar
+ */
+@import "bootstrap";
+@import "custom";
+@import "bootstrap-sprockets";
+
+.fc-day-header {
+  width: 20px;
+  height: 25px;
+}
+
+.fc-day {
+  width: 20px;
+  height: 20px;
+}
+
+.fc-view-container {
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+.fc-toolbar {
+  margin-right: 80px;
+  margin-left: 80px;
+}
+.fc-day-number {
+  margin-right: 7px;
+}
+
+.fc-content .fc-time {
+  display: none;
+}
+
+td.fc-sat {
+  background-color: #eaf4ff;
+}
+
+td.fc-sun {
+  background-color: #ffeaea;
+}
+
+.fc-day-header.fc-widget-header {
+  padding-top: 5px;
+}
+
+th.fc-sun {
+  color: red;
+}
+
+th.fc-sat {
+  color: blue;
+}
+
+.fc {
+  background-color: silver;
+}
+
