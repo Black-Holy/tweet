@@ -7,7 +7,9 @@
             <% if @user.image? %>
               <%= image_tag @user.image.url %>
             <% else %>
-              <%= image_tag("icon/check.png") %>
+            <div class="icon">
+              <%= image_tag("icon/noimage.png") %>
+            </div>
             <% end %>
             <%= f.file_field :image %>
           <div class="form-group">

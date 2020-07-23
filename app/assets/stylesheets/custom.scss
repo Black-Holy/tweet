@@ -86,6 +86,7 @@ h1 {
   }
 }
 
+
 .btn-black {
   color: white;
   border: 1px solid #565656;
@@ -232,3 +233,9 @@ body {
   background-color: silver;
 }
 
+.icon img {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; 
+}
