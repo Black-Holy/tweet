@@ -13,8 +13,7 @@
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
-
-    <% if current_user.admin? && current_user.present? %>
+  <% if current_user.admin? && !current_user? %>
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent2">
     <% else %>
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
