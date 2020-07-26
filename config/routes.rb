@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   resources :calendars
   
   root 'pages#index'
+  # get '/',  to: 'pages#index'  root 'pages#indexと同じ意味'
   get 'sessions/new'
+  # get 'sessions/new',  to: 'sessions#new'　　　get 'sessions/new'と同じ意味
   
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'
