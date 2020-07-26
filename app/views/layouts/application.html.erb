@@ -13,11 +13,12 @@
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
-  <% if current_user.admin? && !current_user? %>
+  <% if current_user.admin? && current_user.present? %>
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent2">
-    <% else %>
+  <% else %>
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
+  <% end %>    
         <% if logged_in? %>
           <%= link_to calendars_path do %>
             <span><%= image_tag "icon/logo2.png", class: "navbar-brand" %></span>
@@ -77,7 +78,6 @@
         </ul>
       </div>
     </nav>
-    <% end %>
     <%= yield %>
     
     <script>
