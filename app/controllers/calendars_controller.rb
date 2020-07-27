@@ -25,15 +25,11 @@ class CalendarsController < ApplicationController
   # POST /calendars.json
   def create
     @calendar = Calendar.new(calendar_params)
-
-    respond_to do |format|
-      if @calendar.save
-        format.html { redirect_to @calendar, notice: 'Calendar was successfully created.' }
-        format.json { render :show, status: :created, location: @calendar }
-      else
-        format.html { render :new }
-        format.json { render json: @calendar.errors, status: :unprocessable_entity }
-      end
+    if @calendar.save
+      redirect_to calendars_path, success: '予定の投稿に成功しました'
+    else
+      flash.now[:danger] = "予定の投稿に失敗しました"
+      render :new
     end
   end
 

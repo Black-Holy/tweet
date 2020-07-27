@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :comments
   
   namespace :admin do
-    resources :users, only: [:index,:destroy]
+    resources :users
   end
   
   get 'favorites/index'
