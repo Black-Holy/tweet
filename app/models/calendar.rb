@@ -1,4 +1,11 @@
 class Calendar < ApplicationRecord
-  validates :start_date, presence: true
-  validates :end_date, presence: true
+
+validate :validate_end_date
+
+def validate_end_date
+  unless end_date > start_date
+  errors.add(:end_date, "投稿に失敗しました")
+  end
+end
+
 end
