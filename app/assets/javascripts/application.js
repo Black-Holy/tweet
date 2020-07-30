@@ -50,6 +50,7 @@ $(function () {
         week: '週',
         day: '日'
     },
+    displayEventTime: true,
     timeFormat: "HH:mm",
     slotEventOverlap: false,
     eventColor: '#63ceef',
