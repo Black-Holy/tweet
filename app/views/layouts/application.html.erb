@@ -15,11 +15,10 @@
     <% end %>
   <% if current_user.try(:admin?) && current_user.present? %>
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent2">
-      <div class="container">
   <% else %>
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
-      <div class="container">
   <% end %>    
+      <div class="container">
         <% if logged_in? %>
           <%= link_to calendars_path do %>
             <span><%= image_tag "icon/logo2.png", class: "navbar-brand" %></span>
