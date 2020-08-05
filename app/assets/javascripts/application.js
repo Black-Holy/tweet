@@ -51,7 +51,8 @@ $(function () {
         day: '日'
     },
     displayEventTime: true,
-    timeFormat: "HH:mm",
+    displayEventEnd: true,
+    timeFormat: "M月D日 HH:mm",
     slotEventOverlap: false,
     eventColor: '#63ceef',
     eventTextColor: '#000000',
