@@ -1,4 +1,8 @@
 class Calendar < ApplicationRecord
+  
+  validates :description, presence: true
+  validates :title, presence: true
+  mount_uploader :image, ImageUploader
 
   validate :validate_end_date
 

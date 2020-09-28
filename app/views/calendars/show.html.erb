@@ -1,22 +1,32 @@
-<p>
+<div class="col-md-6 col-md-offset-3 ">
+  
+
+<p class="showevent_head">
   <strong>Title:</strong>
   <%= @calendar.title %>
 </p>
 
-<p>
+<p class="showevent">
   <strong>Description:</strong>
   <%= @calendar.description %>
 </p>
 
-<p>
+<p class="showevent">
   <strong>Start date:</strong>
   <%= @calendar.start_date %>
 </p>
 
-<p>
+<p class="showevent">
   <strong>End date:</strong>
   <%= @calendar.end_date %>
 </p>
+
+
+<p class="showevent">
+  <%= image_tag @calendar.image.url if @calendar.image.present? %>
+</p>
+
+</div>
 
 <%= link_to 'Edit', edit_calendar_path(@calendar) %> |
 <%= link_to 'Back', calendars_path %>

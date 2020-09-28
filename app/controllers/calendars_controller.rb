@@ -56,6 +56,6 @@ class CalendarsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def calendar_params
-      params.require(:calendar).permit(:title, :description, :start_date, :end_date)
+      params.require(:calendar).permit(:title, :description, :start_date, :end_date, :image)
     end
 end

@@ -71,3 +71,4 @@ gem 'bcrypt'
 gem "carrierwave"
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'google_drive'

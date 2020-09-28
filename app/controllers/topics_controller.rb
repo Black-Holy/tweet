@@ -9,10 +9,12 @@ class TopicsController < ApplicationController
     @topic = Topic.new
   end
   
+  #編集
   def edit
     @topic = Topic.find(params[:id])
   end
   
+  #内容上書き 
   def update
     @topic = Topic.find(params[:id])
     @topic.update(topic_params)
