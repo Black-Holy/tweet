@@ -1,3 +1,4 @@
+<div class="col-md-6 col-md-offset-3">
 <%= form_with(model: calendar, local: true) do |form| %>
   <% if calendar.errors.any? %>
     <div id="error_explanation">
@@ -39,4 +40,12 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+  
+  <div class="backedit">
+    <%= link_to calendars_path do%>
+      <%= image_tag "icon/back.png" %>
+      <p>戻　る</p>
+    <% end %>
+  </div>
 <% end %>
+</div>

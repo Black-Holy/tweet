@@ -5,6 +5,7 @@ class CalendarsController < ApplicationController
   # GET /calendars.json
   def index
     @calendars = Calendar.all
+    @calendar = Calendar.new
   end
 
   # GET /calendars/1
@@ -24,7 +25,7 @@ class CalendarsController < ApplicationController
   # POST /calendars
   # POST /calendars.json
   def create
-    @calendar = Calendar.new(calendar_params)
+    @calendar = current_user.calendars.new(calendar_params)
     if @calendar.save
       redirect_to calendars_path, success: '予定の投稿に成功しました'
     else

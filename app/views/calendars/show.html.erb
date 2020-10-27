@@ -1,32 +1,38 @@
-<div class="col-md-6 col-md-offset-3 ">
+<div class="col-md-6 col-md-offset-3">
   
+      <p class="showevent_head">
+        <strong>Title:</strong>
+        <%= @calendar.title %>
+      </p>
 
-<p class="showevent_head">
-  <strong>Title:</strong>
-  <%= @calendar.title %>
-</p>
-
-<p class="showevent">
-  <strong>Description:</strong>
-  <%= @calendar.description %>
-</p>
-
-<p class="showevent">
-  <strong>Start date:</strong>
-  <%= @calendar.start_date %>
-</p>
-
-<p class="showevent">
-  <strong>End date:</strong>
-  <%= @calendar.end_date %>
-</p>
-
-
-<p class="showevent">
-  <%= image_tag @calendar.image.url if @calendar.image.present? %>
-</p>
-
+      <p class="showevent">
+        <strong>Description:</strong>
+        <%= @calendar.description %>
+      </p>
+    
+      <p class="showevent">
+        <strong>Start date:</strong>
+        <%= @calendar.start_date %>
+      </p>
+    
+      <p class="showevent">
+        <strong>End date:</strong>
+        <%= @calendar.end_date %>
+      </p>
+    
+      <p class="showevent">
+        <%= image_tag @calendar.image.url if @calendar.image.present? %>
+      </p>
+      <div class="backedit">
+      <%= link_to edit_calendar_path(@calendar) do %>
+        <%= image_tag "icon/edit.png" %>
+        <p>編　集</p>
+      <% end %>
+      </div>
+      <div class="backedit">
+      <%= link_to calendars_path do%>
+        <%= image_tag "icon/back.png" %>
+        <p>戻　 る</p>
+      <% end %>
+      </div>
 </div>
-
-<%= link_to 'Edit', edit_calendar_path(@calendar) %> |
-<%= link_to 'Back', calendars_path %>

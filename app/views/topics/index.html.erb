@@ -6,8 +6,12 @@
           <div class="topic-index-single">
             <h2 class="topic-author">
               <%= topic.user.name %>
-                <%= link_to image_tag('icon/delete.png',class: 'topic-index-icon2'), topic, method: :delete, data: { confirm: '投稿を削除しますか？' } %>
-                <%= link_to image_tag('icon/edit.png',class: 'topic-index-icon2'), edit_topic_path(topic) %>
+              <% if logged_in? && current_user.id == topic.user_id %>
+              <div class="delete-edit">
+                <%= link_to '削除', topic, class: 'btn commentdeletebtn', method: :delete, data: { confirm: '投稿を削除しますか？' } %>
+                <%= link_to '編集', edit_topic_path(topic), class: 'btn commentdeletebtn' %>
+              </div>
+              <% end %>
             </h2>
             <%= image_tag topic.image.url if topic.image.present? %>
             <p class="topic-text">
@@ -26,12 +30,12 @@
             <%= link_to new_comment_path(topic_id: topic.id) do %>
               <%= image_tag 'icon/comment.png', class: 'topic-index-icon' %>
             <% end %>
-            <h4 class="comment">返信</h4>
+            <div class="comment">返信</div>
             <% topic.comments.each do |comment| %>
-              <p class="topic-text">
+            <div class="comment-delete">
                 <%= comment.reply %>
-                <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'コメントを削除しますか？' } %>
-              </p>
+                <%= link_to '削除', comment, class: 'btn commentdeletebtn', method: :delete, data: { confirm: 'コメントを削除しますか？' } %>
+            </div>
             <% end %>
           </div>
         </div>

@@ -12,10 +12,13 @@ h1 {
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
   background-color: rgba(0,0,0,0.5);
   
   &:hover {
     color: white;
+    background-color: black;
   }
 }
 
@@ -103,18 +106,6 @@ h1 {
 }
 
 
-.btn-black {
-  color: white;
-  border: 1px solid #565656;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 20px;
-  background-color: rgba(0,0,0,0.3);
-  
-  &:hover {
-    color: #565656;
-  }
-}
 
 .topic-new-wrapper {
   width: 100vw;
@@ -136,6 +127,10 @@ h1 {
     border: 1px solid #e6ecf0;
     border-radius: 3px;
     width: 650px;
+    img {
+      margin-left: 32px;
+      width: 90%;
+    }
     .topic-author {
       padding-right: 20px;
       padding-left: 20px;
@@ -143,6 +138,22 @@ h1 {
       margin-bottom: 30px;
       border-bottom: 2px solid #e6ecf0;
       padding-bottom: 10px;
+      .commentdeletebtn {
+        border: 1px solid black;
+        background-color: skyblue;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin-left: 15px;
+      }
+
+      a:hover{
+        background-color: black;
+        color: white;
+      }
+    }
+    
+    .delete-edit {
+      float: right;
     }
     
     .topic-text {
@@ -151,11 +162,8 @@ h1 {
       margin-top: 10px;
     }
     
-    img {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      margin-left: 32px;
-      width: 90%;
+    img:hover {
+      background-color: black;
     }
     
     .topic-index-icon {
@@ -165,17 +173,34 @@ h1 {
       color: red;
     }
     
-    .topic-index-icon2 {
-      width: 25px;
-      height: 25px;
-      margin-left: 0px;
+    .comment-delete {
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e6ecf0;
+      .commentdeletebtn {
+        border: 1px solid black;
+        background-color: skyblue;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-left: 15px;
+      }
+      .commentdeletebtn:hover {
+        background-color: black;
+        color: white;
+      }
     }
   }
 }
 
 .comment {
+  font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e6ecf0;
 }
 
 .userindex {
@@ -211,7 +236,7 @@ table {
   margin-top: 30px;
 }
 
-.event {
+.event1 {
   background-color: silver;
   padding-top: 100px;
   width: 250px;
@@ -239,9 +264,6 @@ th[colspan] {
 }
 
 .eventlist {
-  padding-top: 200px;
-  margin-left: 80px;
-  margin-right: 80px;
   background-color: silver;
 }
 
@@ -272,3 +294,55 @@ body {
     width: 70%;
   }
 }
+
+.edit {
+  display: inline;
+  width: 20px;
+  img {
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 15px;
+  }
+}
+
+.back {
+  display: inline;
+  width: 20px;
+  img {
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 15px;
+  }
+}
+
+
+.back2 {
+  width: auto;
+  height: auto;
+  img {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.message {
+  color: black;
+  position: center;
+  font-weight: 90px;
+  font-size: 40px;
+  margin-top: 20px;
+  white-space: nowrap;
+}
+
+.backedit {
+  display: block;
+  float: left;
+  img {
+    height: 40px;
+    padding-left: 8px;
+    padding-right: 15px;
+  }
+}
+
