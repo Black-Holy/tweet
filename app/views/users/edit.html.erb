@@ -13,19 +13,27 @@
             <% end %>
             <%= f.file_field :image %>
           <div class="form-group">
-            <%= f.label :name, class: 'text-red' %>
+            <%= f.label :name, "ユーザー名", class: 'text-red' %>
             <%= f.text_field :name, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :email, class: 'text-red' %>
+            <%= f.label :email, "メールアドレス", class: 'text-red' %>
             <%= f.text_field :email, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :password, class: 'text-red' %>
+            <%= f.label :birthday, "生年月日", class: 'text-red' %>
+            <%= f.date_select :birthday, {:start_year => 1900 } %>
+          </div>
+          <div class="form-group">
+            <%= f.label :description, "コメント", class: 'text-red' %>
+            <%= f.text_field :description, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, "パスワード", class: 'text-red' %>
             <%= f.password_field :password, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :password_confirmation, class: 'text-red' %>
+            <%= f.label :password_confirmation, "パスワード（確認）", class: 'text-red' %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
           <%= f.submit "登録", class: 'btn-block btn-red' %>
